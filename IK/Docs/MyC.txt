@@ -1,0 +1,83 @@
+My C
+
+Seleciton sort 
+    - Brute force
+ - Sudo Code
+ 	array[] = {original array}
+ 	index=0;
+ 	for(int i=0;i<array.lenght;i++){
+ 		min = i;
+ 		for(int j=i+1;j<array.lenght;j++){
+ 			if(array[j] < array[min]){
+ 			min = j;
+ 			}
+ 		}
+ 		if(i<min){
+ 			temp = arrany[i];
+ 			array[i] = array[min];
+ 			array[min] =temp;
+ 		}
+ 	}
+4 2 5 9 8
+2 4 5 9 8 
+2 4 5 9 8
+2 4 5 8 9    
+
+O(n2)
+
+
+Boubble sort: 
+
+array[] = {original array}
+
+for(int i=0;i<array.lenght;i++){
+    for(int j=array.lenght-1;j>=i;j--){
+        if(array[j]<array[j-1]){
+            temp=array[j-1];
+            array[j-1] = array[j];
+            array[j] = temp;
+        }
+    }
+ }   
+
+4 2 5 9 8
+4 2 5 8 9
+2 4 5 8 9  
+
+O(n2)
+
+Boubble sort is correct but bad preformaning alogrithum . Selection sort will preforme much better than bubble sort even though both has O(n2)
+
+Divide and Concour : (Decrease and Concure  / Lazy manager approach )
+
+Recursive (if top-down) and iterative (if bottom-up)
+
+Recursive (if top-down):
+Bubble sort
+Selection sort 
+
+
+Bottom Up : 
+
+for(i=0;i<arr.length;i++)
+temp=a[i];
+j=i-1
+while(j>=0 && arr[j] > temp){
+    arr[j]=arr[j-1];
+    j--
+}
+a[j]=temp;
+
+4 2 5 9 8
+temp=4 [4 2 5 9 8]
+temp=2 [4 4 5 9 8]
+        [2 4 5 9 8] 
+temp=5 [2 4 5 9 8]
+        [2 4 5 9 8]
+        [2 4 5 9 8]
+temp=9  [2 4 5 9 8]
+        [2 4 5 9 8]
+temp=8  [2 4 5 9 8]
+        [2 4 5 9 9]
+        [2 4 5 8 9]                
+
